@@ -193,10 +193,10 @@
                     card.innerHTML = `
                         <img src="${product.image}" alt="${product.name}" class="product-image">
                         <h4 class="product-title">${product.name}</h4>
-                        <div class="product-price">${priceHtml}</div>
+                        <div class="product-price">${priceHtml}</div> <hr>
                         <div class="stars">
                             ${getStarsHTML(product.rating)}
-                            <span class="review-count">${product.reviews} Reviews</span>
+                            <span class="review-count">| ${product.reviews} Reviews</span>
                         </div>
                     `;
                     grid.appendChild(card);
