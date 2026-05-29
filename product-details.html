@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abokichi - Product Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/product-details.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div>USD <i class="fas fa-chevron-down"></i> &nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Stores</div>
+        <div>Login / Register</div>
+    </div>
+
+    <header class="header-main">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./assets/images/logo.webp" alt="ABOKICHI">
+            </a>
+        </div>
+        <nav class="main-nav" id="main-nav">
+            <ul class="nav-links">
+                <li><a href="products.html">Shop <i class="fas fa-chevron-down" style="font-size:10px;"></i></a></li>
+                <li><a href="#">Our story</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <i class="fas fa-search"></i>
+            <i class="far fa-heart"></i>
+            <div class="cart-icon-container">
+                <a href="#" style="color:inherit;"><i class="fas fa-shopping-bag"></i></a>
+                <span class="cart-count">0</span>
+            </div>
+            <i class="fas fa-bars mobile-menu-btn" id="mobile-menu-btn"></i>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <a href="products.html">Shop</a> &gt; <span id="breadcrumb-name">Loading...</span>
+    </div>
+
+    <div class="product-details-container">
+        <div class="product-images">
+            <div class="main-image-container">
+                <img src="" alt="Product Image" class="main-image" id="main-image">
+            </div>
+            <div class="thumbnails" id="thumbnails">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1 id="product-title">Loading...</h1>
+            <div class="price-section" id="product-price"></div>
+            <div class="rating-section stars" id="product-rating"></div>
+            <p class="description" id="product-description">Loading...</p>
+            <div class="actions">
+                <button class="btn-add-cart" onclick="addToCart(event)">ADD TO CART</button>
+                <button class="btn-buy-now" onclick="window.location.href='order-success.html'">Buy Now</button>
+            </div>
+            <button class="wishlist-btn"><i class="far fa-heart"></i> WISHLIST</button>
+            <div class="share-section">
+                SHARE:
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-tabs">
+        <div class="tabs-header">
+            <button class="tab-btn active" data-tab="description">DESCRIPTION</button>
+            <button class="tab-btn" data-tab="reviews">REVIEWS</button>
+            <button class="tab-btn" data-tab="videos">VIDEOS</button>
+            <button class="tab-btn" data-tab="comments">COMMENTS</button>
+        </div>
+        <div class="tab-content" id="tab-description">
+            <p>Your new cooking BFF! You can add this to virtually everything. Try it on rice, on meat or tofu, in your burger, ramen and pretty much anything. These award winning products will have your taste buds lingering for more...and potentially create an addiction.</p>
+            <br>
+            <p>Chili OKAZU is an umami-rich chili, miso, and sesame oil based condiment often eaten with rice in Japan, which can also be used to top chicken, burgers, fish, eggs, potatoes, and more.</p>
+            <p>Use it as a marinade or as an ingredient in your own homemade salad dressing, this condiment is versatile and we encourage you to experiment.</p>
+            <br>
+            <p>HEAT LEVEL: MILD-MEDIUM</p>
+            <br>
+            <p>INGREDIENTS: SUNFLOWER OIL, SESAME OIL, GARLIC, MISO PASTE (ORGANIC SOYBEANS, RICE, SALT), TAMARI SOY SAUCE (NON-GMO SOYBEANS, SALT, SUGAR), SUGAR, CHILI POWDER, WHITE SESAME SEEDS</p>
+            <br>
+            <p>CHILI &amp; SPICY OKAZU CONTAINS: SESAME, SOYBEANS. MAY CONTAIN: MUSTARD.</p>
+            <p>CURRY OKAZU CONTAINS: SESAME, SOYBEANS, MUSTARD.</p>
+            <br>
+            <p>PRODUCT SEPARATION IS NORMAL. REFRIGERATE AFTER OPENING</p>
+        </div>
+    </div>
+    
+   <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>LINKS</h4>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>INFORMATION</h4>
+            <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Refund policy</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-payments">
+            <img src="./assets/images/visa.webp" alt="Visa">
+            <img src="./assets/images/apple-pay.webp" alt="Apple Pay">
+            <img src="./assets/images/american-express.jpg" alt="American Express">
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-pinterest"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+        <p>&copy; 2021 Abokichi.</p>
+    </div>
+</footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+
+        function switchImage(thumb) {
+            document.getElementById('main-image').src = thumb.src;
+            document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = parseInt(urlParams.get('id'));
+            const product = products.find(p => p.id === productId) || products[0];
+
+            document.getElementById('breadcrumb-name').textContent = product.name;
+            document.getElementById('product-title').textContent = product.name;
+            document.getElementById('main-image').src = product.image;
+            document.getElementById('product-description').textContent = product.description;
+
+            // Dynamically generate thumbnails
+            const thumbnailsContainer = document.getElementById('thumbnails');
+            if (product.thumbnails && product.thumbnails.length > 0) {
+                product.thumbnails.forEach((thumbSrc, index) => {
+                    const thumbImg = document.createElement('img');
+                    thumbImg.src = thumbSrc;
+                    thumbImg.className = index === 0 ? 'thumbnail active' : 'thumbnail';
+                    thumbImg.onclick = function() { switchImage(this); };
+                    thumbnailsContainer.appendChild(thumbImg);
+                });
+            } else {
+                // Fallback: use main image as thumbnail if no thumbnails array
+                const thumbImg = document.createElement('img');
+                thumbImg.src = product.image;
+                thumbImg.className = 'thumbnail active';
+                thumbImg.onclick = function() { switchImage(this); };
+                thumbnailsContainer.appendChild(thumbImg);
+            }
+
+            const priceHtml = product.originalPrice
+                ? `$${product.price.toFixed(2)} <span class="original-price">$${product.originalPrice.toFixed(2)}</span>`
+                : `$${product.price.toFixed(2)}`;
+            document.getElementById('product-price').innerHTML = priceHtml;
+            document.getElementById('product-rating').innerHTML = `
+                ${getStarsHTML(product.rating)}
+                <span style="color:#777; font-size:13px; margin-left:8px;">${product.reviews} Reviews</span>
+            `;
+        });
+    </script>
+</body>
+</html>
