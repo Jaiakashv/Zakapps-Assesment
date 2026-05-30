@@ -1,6 +1,6 @@
 # Abokichi E-Commerce Assessment Project
 
-Hello! This is my submission for the front-end web development assessment. I built a clean, fast, and responsive e-commerce experience using plain HTML, CSS, and vanilla JavaScript (no external frameworks or libraries are required to run it).
+This is my submission for the front-end web development assessment. I built a clean, fast, and responsive e-commerce experience using plain HTML, CSS, and vanilla JavaScript (no external frameworks or libraries are required to run it).
 
 ## Key Features Implemented
 
