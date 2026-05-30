@@ -105,7 +105,6 @@
    <footer>
     <div class="footer-content">
         <div class="footer-section">
-            <h4>LINKS</h4>
             <ul>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Contact us</a></li>
@@ -115,7 +114,6 @@
             </ul>
         </div>
         <div class="footer-section">
-            <h4>INFORMATION</h4>
             <ul>
                 <li><a href="#">Terms of Service</a></li>
                 <li><a href="#">Refund policy</a></li>
@@ -123,14 +121,14 @@
             </ul>
         </div>
         <div class="footer-section footer-payments">
-            <img src="./assets/images/visa.webp" alt="Visa">
-            <img src="./assets/images/apple-pay.webp" alt="Apple Pay">
-            <img src="./assets/images/american-express.jpg" alt="American Express">
+            <img src="./assets/images/visa.webp" alt="Visa" loading="lazy">
+            <img src="./assets/images/apple-pay.webp" alt="Apple Pay" loading="lazy">
+            <img src="./assets/images/american-express.jpg" alt="American Express" loading="lazy">
         </div>
     </div>
     <div class="footer-bottom">
         <div class="footer-social">
-            <i class="fab fa-facebook-f"></i>
+            <i class="fa-brands fa-facebook"></i>
             <i class="fab fa-twitter"></i>
             <i class="fab fa-instagram"></i>
             <i class="fab fa-youtube"></i>
@@ -237,7 +235,7 @@
                     card.onclick = () => window.location.href = `product-details.html?id=${product.id}`;
                     card.innerHTML = `
                         <div class="product-card-img-wrap">
-                            <img src="${product.image}" alt="${product.name}" class="product-image">
+                            <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
                         </div>
                         <div class="product-card-body">
                             <h4 class="product-title">${product.name}</h4>

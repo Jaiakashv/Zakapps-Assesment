@@ -68,18 +68,18 @@
 
     <section class="container stories-recipes">
         <div class="story-block">
-            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=600&h=350" alt="Our Story">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=600&h=350" alt="Our Story" loading="lazy">
             <h3>Our story</h3>
         </div>
         <div class="recipe-block">
-            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&q=80&w=600&h=350" alt="Recipes">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&q=80&w=600&h=350" alt="Recipes" loading="lazy">
             <h3>Recipes</h3>
         </div>
     </section>
 
   <section class="best-sellers-section">
     <div class="container">
-      <center><img src="./assets/images/best-seller.png" alt="" style="width: 70px; height: auto;"></center>
+      <center><img src="./assets/images/best-seller.png" alt="" style="width: 70px; height: auto;" loading="lazy"></center>
         <h2 class="section-title">Best Sellers</h2>
         <div class="product-grid" id="best-sellers-grid"></div>
     </div>
@@ -90,7 +90,7 @@
     </section>
 
     <section class="press-logos">
-       <img src="./assets/images/banner.webp" alt="">
+       <img src="./assets/images/banner.webp" alt="" loading="lazy">
     </section>
 
     <section class="newsletter">
@@ -128,14 +128,14 @@
             </ul>
         </div>
         <div class="footer-section footer-payments">
-            <img src="./assets/images/visa.webp" alt="Visa">
-            <img src="./assets/images/apple-pay.webp" alt="Apple Pay">
-            <img src="./assets/images/american-express.jpg" alt="American Express">
+            <img src="./assets/images/visa.webp" alt="Visa" loading="lazy">
+            <img src="./assets/images/apple-pay.webp" alt="Apple Pay" loading="lazy">
+            <img src="./assets/images/american-express.jpg" alt="American Express" loading="lazy">
         </div>
     </div>
     <div class="footer-bottom">
         <div class="footer-social">
-            <i class="fab fa-facebook-f"></i>
+            <i class="fa-brands fa-facebook"></i>
             <i class="fab fa-twitter"></i>
             <i class="fab fa-instagram"></i>
             <i class="fab fa-youtube"></i>
@@ -164,7 +164,7 @@
                 card.className = 'product-card';
                 card.innerHTML = `
                     <div class="product-card-img-wrap">
-                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                        <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
                         <div class="card-actions">
                             <button class="card-action-btn" title="Add to Cart" onclick="event.stopPropagation(); addToCart(event)">
                                 <i class="fas fa-shopping-bag"></i>

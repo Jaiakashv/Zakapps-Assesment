@@ -47,7 +47,7 @@
     <div class="product-details-container">
         <div class="product-images">
             <div class="main-image-container">
-                <img src="" alt="Product Image" class="main-image" id="main-image">
+                <img src="" alt="Product Image" class="main-image" id="main-image" loading="lazy">
             </div>
             <div class="thumbnails" id="thumbnails">
             </div>
@@ -117,14 +117,14 @@
             </ul>
         </div>
         <div class="footer-section footer-payments">
-            <img src="./assets/images/visa.webp" alt="Visa">
-            <img src="./assets/images/apple-pay.webp" alt="Apple Pay">
-            <img src="./assets/images/american-express.jpg" alt="American Express">
+            <img src="./assets/images/visa.webp" alt="Visa" loading="lazy">
+            <img src="./assets/images/apple-pay.webp" alt="Apple Pay" loading="lazy">
+            <img src="./assets/images/american-express.jpg" alt="American Express" loading="lazy">
         </div>
     </div>
     <div class="footer-bottom">
         <div class="footer-social">
-            <i class="fab fa-facebook-f"></i>
+            <i class="fa-brands fa-facebook"></i>
             <i class="fab fa-twitter"></i>
             <i class="fab fa-instagram"></i>
             <i class="fab fa-youtube"></i>
@@ -172,6 +172,7 @@
                     const thumbImg = document.createElement('img');
                     thumbImg.src = thumbSrc;
                     thumbImg.className = index === 0 ? 'thumbnail active' : 'thumbnail';
+                    thumbImg.loading = 'lazy';
                     thumbImg.onclick = function() { switchImage(this); };
                     thumbnailsContainer.appendChild(thumbImg);
                 });
@@ -180,6 +181,7 @@
                 const thumbImg = document.createElement('img');
                 thumbImg.src = product.image;
                 thumbImg.className = 'thumbnail active';
+                thumbImg.loading = 'lazy';
                 thumbImg.onclick = function() { switchImage(this); };
                 thumbnailsContainer.appendChild(thumbImg);
             }
