@@ -90,6 +90,14 @@
                     <label><input type="checkbox" name="flavour" value="Mild"> Mild</label>
                 </div>
             </div>
+            <div class="filter-column">
+                <h4>Rating</h4>
+                <div class="filter-options">
+                    <label><input type="checkbox" name="rating" value="5"> 5 Stars</label>
+                    <label><input type="checkbox" name="rating" value="4"> 4 Stars & above</label>
+                    <label><input type="checkbox" name="rating" value="3"> 3 Stars & above</label>
+                </div>
+            </div>
         </div>
 
         <div class="product-grid" id="main-product-grid"></div>
@@ -159,15 +167,52 @@
                 `;
             });
 
+            // Grid & List View Toggle
+            const gridViewBtn = document.getElementById('grid-view-btn');
+            const listViewBtn = document.getElementById('list-view-btn');
+
+            gridViewBtn.addEventListener('click', () => {
+                gridViewBtn.classList.add('active');
+                listViewBtn.classList.remove('active');
+                grid.classList.remove('list-view');
+            });
+
+            listViewBtn.addEventListener('click', () => {
+                listViewBtn.classList.add('active');
+                gridViewBtn.classList.remove('active');
+                grid.classList.add('list-view');
+            });
+
             function renderProducts() {
                 const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(cb => cb.value);
                 const selectedTypes = Array.from(document.querySelectorAll('input[name="type"]:checked')).map(cb => cb.value);
+                const selectedFlavours = Array.from(document.querySelectorAll('input[name="flavour"]:checked')).map(cb => cb.value);
+                const selectedRatings = Array.from(document.querySelectorAll('input[name="rating"]:checked')).map(cb => parseInt(cb.value));
                 const sortVal = sortSelect.value;
 
                 let filtered = products.filter(p => {
                     const catMatch = selectedCategories.length === 0 || selectedCategories.includes(p.category);
                     const typeMatch = selectedTypes.length === 0 || selectedTypes.includes(p.type);
-                    return catMatch && typeMatch;
+                    
+                    let flavourMatch = true;
+                    if (selectedFlavours.length > 0) {
+                        flavourMatch = selectedFlavours.some(flav => {
+                            const nameLower = p.name.toLowerCase();
+                            const descLower = p.description.toLowerCase();
+                            const flavLower = flav.toLowerCase();
+                            return nameLower.includes(flavLower) || descLower.includes(flavLower);
+                        });
+                    }
+
+                    let ratingMatch = true;
+                    if (selectedRatings.length > 0) {
+                        ratingMatch = selectedRatings.some(r => {
+                            if (r === 5) return p.rating === 5;
+                            return p.rating >= r;
+                        });
+                    }
+
+                    return catMatch && typeMatch && flavourMatch && ratingMatch;
                 });
 
                 if (sortVal === 'price-low') filtered.sort((a, b) => a.price - b.price);
@@ -191,21 +236,23 @@
                     card.className = 'product-card';
                     card.onclick = () => window.location.href = `product-details.html?id=${product.id}`;
                     card.innerHTML = `
-                        <img src="${product.image}" alt="${product.name}" class="product-image">
-                        <h4 class="product-title">${product.name}</h4>
-                        <div class="product-price">${priceHtml}</div> <hr>
-                        <div class="stars">
-                            ${getStarsHTML(product.rating)}
-                            <span class="review-count">| ${product.reviews} Reviews</span>
+                        <div class="product-card-img-wrap">
+                            <img src="${product.image}" alt="${product.name}" class="product-image">
+                        </div>
+                        <div class="product-card-body">
+                            <h4 class="product-title">${product.name}</h4>
+                            <div class="product-price">${priceHtml}</div> <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;">
+                            <div class="stars">
+                                ${getStarsHTML(product.rating)}
+                                <span class="review-count">| ${product.reviews} Reviews</span>
+                            </div>
                         </div>
                     `;
                     grid.appendChild(card);
                 });
             }
 
-            document.querySelectorAll('input[type="checkbox"]').forEach(el => {
-                el.addEventListener('change', renderProducts);
-            });
+            horizontalFilters.addEventListener('change', renderProducts);
             sortSelect.addEventListener('change', renderProducts);
             renderProducts();
         });
