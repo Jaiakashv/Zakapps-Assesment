@@ -596,6 +596,17 @@ footer {
         width: 100%;
         min-width: 0;
     }
+
+    .stars {
+        font-size: 13px;
+        gap: 4px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .review-count {
+        font-size: 11px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -663,5 +674,14 @@ footer {
         width: 30px;
         height: 30px;
         font-size: 12px;
+    }
+
+    .stars {
+        font-size: 11px;
+        gap: 3px;
+    }
+
+    .review-count {
+        font-size: 10px;
     }
 }
