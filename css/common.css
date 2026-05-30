@@ -483,6 +483,7 @@ footer {
     .header-main {
         top: 30px;
         padding: 12px 15px;
+        flex-wrap: wrap;
     }
 
     body {
